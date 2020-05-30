@@ -7,6 +7,59 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" Grid.ColumnSpan="7">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prestamo Id" FontSize="14" FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
+                <TextBox Name="Prestamoid" Text="{Binding Prestamoid}" Width="55" Height="20" Margin="17,0,100,0"/>
+                <!--Buscar-->
+                <Button Name="buscarButton" Width="60" Height="20" HorizontalContentAlignment="Left" Margin="-17,0,0,0" Click="buscarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Buscar" FontWeight="Bold" Padding="-2"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <!--"Fecha"-->
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <Label Content="Fecha" FontWeight="Bold"/>
+                <DatePicker Name="fechaNDatePicker" SelectedDate="{Binding Fecha}" Width="200" Height="20" Margin="67,0,30,0" Padding="2,-1,2,2"/>
+            </StackPanel>
+            <!--"Personal Id"-->
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0" >
+                <Label Content="Personal Id" FontWeight="Bold"/>
+                <TextBox Name="PersonalIdTextBox" Text="{Binding Personaid}" Width="200" Height="20" Margin="37,0,30,0"/>
+            </StackPanel>
+            <!--"Concepto-->
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <Label Content="Concepto" FontWeight="Bold"/>
+                <TextBox Name="ConceptoTextBox" Text="{Binding Concepto}" Width="200" Height="20" Margin="45,0,30,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <Label Content="Monto" FontWeight="Bold"/>
+                <TextBox Name="MontoTextBox" Text="{Binding Monto}" Width="200" Height="20" Margin="60,0,30,0"/>
+            </StackPanel>
 
+            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                <Label Content="Balance" FontWeight="Bold"/>
+                <TextBox Name="BalanceTextBox" Text="{Binding Balance}" Width="200" Height="20" Margin="55,0,30,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="8,50,0,0" Width="245" >
+                <Button Name="guardarbotton" Width="62" Height="20" HorizontalAlignment="Left" Click="guardarbotton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Guardar" FontWeight="Bold" Padding="-2" Width="41"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="editarbotton" Height="20" HorizontalContentAlignment="Left" Margin="26,0,0,0" Click="editarbotton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Editar" FontWeight="Bold" Padding="-2"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="eliminarButton" Height="20" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Margin="26,0" Click="eliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Eliminar" FontWeight="Bold" Padding="-2"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>
